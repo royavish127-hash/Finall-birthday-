@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>For Awwradhya 🎀</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Playfair+Display:wght@500;600&display=swap');
+
+*{box-sizing:border-box}
+html,body{margin:0;width:100%;height:100%;overflow:hidden}
+body{
+  font-family:Montserrat,Arial,sans-serif;
+  color:#fff;
+  background:
+    radial-gradient(circle at 15% 20%,rgba(28,105,210,.30),transparent 28%),
+    radial-gradient(circle at 85% 75%,rgba(255,125,170,.20),transparent 30%),
+    linear-gradient(135deg,#050608 0%,#11151b 48%,#050608 100%);
+  display:grid;place-items:center;
+}
+
+/* Luxury perfume / floral atmosphere */
+body:before,body:after{
+  content:"";
+  position:fixed;
+  pointer-events:none;
+  opacity:.25;
+  filter:blur(.2px);
+}
+body:before{
+  width:280px;height:280px;left:-90px;bottom:-80px;
+  border:1px solid #1c69d4;
+  box-shadow:0 0 80px #1c69d4;
+  border-radius:50%;
+}
+body:after{
+  width:220px;height:220px;right:-80px;top:-70px;
+  border:1px solid #fff;
+  box-shadow:0 0 90px rgba(255,255,255,.35);
+  border-radius:50%;
+}
+
+.card{
+  width:min(92vw,680px);
+  min-height:520px;
+  padding:54px 34px 42px;
+  position:relative;
+  text-align:center;
+  background:rgba(8,10,14,.72);
+  border:1px solid rgba(255,255,255,.16);
+  box-shadow:0 30px 90px rgba(0,0,0,.55), inset 0 1px 0 rgba(255,255,255,.08);
+  backdrop-filter:blur(18px);
+  overflow:hidden;
+}
+
+.card:before{
+  content:"BMW • FRAGRANCE • FLOWERS";
+  position:absolute;top:18px;left:0;right:0;
+  font-size:9px;letter-spacing:4px;color:#aeb7c4;
+}
+
+.flower{
+  position:absolute;
+  font-size:58px;
+  opacity:.24;
+  filter:drop-shadow(0 0 14px rgba(255,255,255,.2));
+}
+.f1{left:18px;top:65px}.f2{right:15px;bottom:25px}.f3{right:42px;top:52px;font-size:38px}
+
+.bottle{
+  position:absolute;right:38px;bottom:38px;width:55px;height:80px;
+  border:1px solid rgba(255,255,255,.25);
+  background:linear-gradient(90deg,rgba(255,255,255,.12),rgba(28,105,210,.14),rgba(255,255,255,.04));
+  opacity:.28;
+}
+.bottle:before{
+  content:"";position:absolute;left:15px;top:-13px;width:23px;height:14px;
+  border:1px solid rgba(255,255,255,.3);background:#111;
+}
+.bottle:after{
+  content:"FRAGRANCE";position:absolute;left:6px;right:6px;top:34px;
+  font-size:5px;letter-spacing:1px;color:#fff;
+}
+
+h1{
+  margin:30px 0 12px;
+  font-family:"Playfair Display",serif;
+  font-size:clamp(32px,7vw,58px);
+  font-weight:600;
+  letter-spacing:.5px;
+}
+.subtitle{color:#b9c0ca;font-size:14px;letter-spacing:1.5px}
+.question{
+  margin-top:42px;
+  min-height:58px;
+  font-size:clamp(24px,5vw,38px);
+  font-weight:600;
+}
+.buttons{height:150px;margin-top:24px;position:relative}
+button{
+  border:0;padding:14px 30px;font:600 15px Montserrat;
+  cursor:pointer;transition:transform .2s,box-shadow .2s;
+}
+#yes{
+  color:white;background:#1c69d4;
+  box-shadow:0 10px 30px rgba(28,105,210,.35);
+}
+#yes:hover{transform:scale(1.07);box-shadow:0 12px 38px rgba(28,105,210,.55)}
+#no{
+  position:absolute;
+  z-index:20;
+  left:55%;
+  top:0;
+  color:#15171a;
+  background:#f5f7fa;
+  box-shadow:0 10px 25px rgba(0,0,0,.25);
+  display:inline-block;
+  visibility:visible;
+  opacity:1;
+}
+.hint{font-size:11px;color:#78818d;letter-spacing:1px}
+
+.final{display:none;animation:pop .7s ease both}
+.final h2{font-size:clamp(32px,7vw,55px);margin:20px 0 4px;font-family:"Playfair Display",serif}
+.final p{font-size:clamp(18px,4vw,28px);font-weight:600;color:#fff;margin:0 0 24px}
+.final img{
+  width:min(100%,520px);max-height:310px;object-fit:cover;
+  border:1px solid rgba(255,255,255,.3);
+  box-shadow:0 18px 55px rgba(0,0,0,.55);
+}
+@keyframes pop{from{opacity:0;transform:scale(.92)}to{opacity:1;transform:scale(1)}}
+.petal{position:fixed;top:-20px;font-size:18px;pointer-events:none;animation:fall linear forwards}
+@keyframes fall{to{transform:translateY(110vh) rotate(540deg);opacity:0}}
+
+@media(max-width:520px){
+  .card{min-height:500px;padding:45px 20px 30px}
+  .flower{font-size:42px}.bottle{right:15px}
+}
+</style>
+</head>
+<body>
+
+<main class="card">
+  <div class="flower f1">🌸</div>
+  <div class="flower f2">🌷</div>
+  <div class="flower f3">✿</div>
+  <div class="bottle"></div>
+
+  <section id="questionScreen">
+    <h1>One little question...</h1>
+    <div class="subtitle">A SPECIAL EDITION • JUST FOR YOU</div>
+    <div id="question" class="question">Tu achhi ladki haii? 🎀</div>
+
+    <div class="buttons">
+      <button id="yes">YES ❤️</button>
+      <button id="no">NO 😏</button>
+    </div>
+
+    <div class="hint">P.S. The NO button is feeling a little shy...</div>
+  </section>
+
+  <section id="finalScreen" class="final">
+    <h2>Very good ✨</h2>
+    <p>Happy birthdayy awwradhyaaa🎀</p>
+    <img src="awwradhya.jpeg" alt="Birthday photo">
+  </section>
+</main>
+
+<script>
+const no = document.getElementById("no");
+const yes = document.getElementById("yes");
+const question = document.getElementById("question");
+const questionScreen = document.getElementById("questionScreen");
+const finalScreen = document.getElementById("finalScreen");
+
+const messages = [
+  "Are you sure? 👀",
+  "Really? 😭",
+  "Think again... 🎀",
+  "Nice try 😌"
+];
+let attempts = 0;
+
+function moveNo(){
+  attempts++;
+  no.style.position = "fixed";
+  question.textContent = messages[Math.min(attempts-1,messages.length-1)];
+
+  const margin = 18;
+  const maxX = Math.max(margin, window.innerWidth - no.offsetWidth - margin);
+  const maxY = Math.max(margin, window.innerHeight - no.offsetHeight - margin);
+
+  let x = margin + Math.random() * (maxX-margin);
+  let y = margin + Math.random() * (maxY-margin);
+
+  // Keep it away from the YES button when possible.
+  const yesRect = yes.getBoundingClientRect();
+  if (Math.abs(x-yesRect.left)<150 && Math.abs(y-yesRect.top)<100){
+    x = Math.min(maxX, yesRect.right + 80);
+    y = Math.min(maxY, yesRect.top + 10);
+  }
+  no.style.left = x + "px";
+  no.style.top = y + "px";
+}
+
+function nearNo(e){
+  const r=no.getBoundingClientRect();
+  const cx=r.left+r.width/2, cy=r.top+r.height/2;
+  const d=Math.hypot(e.clientX-cx,e.clientY-cy);
+  if(d<125) moveNo();
+}
+document.addEventListener("mousemove",nearNo);
+no.addEventListener("mouseenter",moveNo);
+no.addEventListener("touchstart",e=>{e.preventDefault();moveNo();});
+no.addEventListener("click",e=>{e.preventDefault();moveNo();});
+
+yes.addEventListener("click",()=>{
+  questionScreen.style.display="none";
+  no.style.display="none";
+  finalScreen.style.display="block";
+  confetti();
+});
+
+function confetti(){
+  const symbols=["🎉","🎀","🌸","✨","💙","🌷","💐"];
+  for(let i=0;i<90;i++){
+    const p=document.createElement("div");
+    p.className="petal";
+    p.textContent=symbols[Math.floor(Math.random()*symbols.length)];
+    p.style.left=Math.random()*100+"vw";
+    p.style.animationDuration=(2.5+Math.random()*3)+"s";
+    p.style.animationDelay=(Math.random()*.8)+"s";
+    p.style.fontSize=(12+Math.random()*18)+"px";
+    document.body.appendChild(p);
+    setTimeout(()=>p.remove(),6500);
+  }
+}
+
+// Initial position beside YES
+function initialPosition(){
+  // Keep the NO button visible beside YES on first load.
+  no.style.position = "absolute";
+  no.style.left = "55%";
+  no.style.top = "0px";
+}
+setTimeout(initialPosition,50);
+window.addEventListener("resize",()=>{ if(no.style.display!=="none") moveNo(); });
+</script>
+</body>
+</html>
